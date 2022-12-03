@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: default
+  name: jellyfin
+  labels:
+    app: jellyfin 
+spec:
+  type: ClusterIP
+  selector:
+    app: jellyfin
+  ports:
+  - port: 8096
